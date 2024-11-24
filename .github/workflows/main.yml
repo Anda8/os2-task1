@@ -8,17 +8,17 @@ jobs:
     runs-on: ubuntu-latest
 
   steps:
-  - name: 'Before'
-    run: ls
+    - name: 'Before'
+      run: ls
 
-  - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
 
-  - name: 'Before'
-    run: ls
+    - name: 'Before'
+      run: ls
 
-  - name: "Login to Docker hub"
-    run: docker login --username ${{secrets.DOCKER_USERNAME}} --password ${{secret.DOCKER_TOKEN}}
-  - name: 'Building Images'
-    run: docker build -t ${{secrets.DOCKER_USERNAME}}/andaelaaser .
-  - name: 'Pushing'
-    run:  docker push ${{secrets.DOCKER_USERNAME}}/andaelaaser
+    - name: "Login to Docker hub"
+      run: docker login --username ${{secrets.DOCKER_USERNAME}} --password ${{secret.DOCKER_TOKEN}}
+    - name: 'Building Images'
+      run: docker build -t ${{secrets.DOCKER_USERNAME}}/andaelaaser .
+    - name: 'Pushing'
+      run:  docker push ${{secrets.DOCKER_USERNAME}}/andaelaaser
