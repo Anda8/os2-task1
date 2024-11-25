@@ -2,10 +2,10 @@ FROM openjdk
 # when open os go to app
 WORKDIR /application
 
-# copy main.cpp
+# copy Anda.java
 COPY Anda.java .
 
-# Install g++ and compile main.cpp
+# Install javac and compile Anda.java
 RUN javac Anda.java
 
 # Command to run the compiled app
