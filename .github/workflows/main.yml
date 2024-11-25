@@ -24,11 +24,11 @@ jobs:
       - name: 'Printing File Content After using uses'
         run: ls
 
-      - name: "Login to Docker Hub"
-        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
+      # - name: "Login to Docker Hub"
+      #   run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN }}
 
-      - name: "Building Docker Hub image"
-        run: docker build -t  ${{ secrets.DOCKER_USERNAME }}/andaelaaser .
+      # - name: "Building Docker Hub image"
+      #   run: docker build -t  ${{ secrets.DOCKER_USERNAME }}/andaelaaser .
 
-      - name: "Pushing image to Docker Hub "
-        run: docker push  ${{ secrets.DOCKER_USERNAME }}/andaelaaser 
+      # - name: "Pushing image to Docker Hub "
+      #   run: docker push  ${{ secrets.DOCKER_USERNAME }}/andaelaaser 
